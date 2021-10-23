@@ -1,5 +1,7 @@
 from Producto import Producto
 from RepositorioCombo import RepositorioCombo
+from Combo import Combo
+
 listProductos = []
 
 class RepositorioProductos():
@@ -8,7 +10,8 @@ class RepositorioProductos():
         
         listProductos.append(producto)
 
-
+    def LongitudLista():
+        return len(listProductos)
     def ObtenerProductos():
         
         for i in listProductos:
@@ -37,5 +40,6 @@ class RepositorioProductos():
                 Producto.MostrarProdEspec(i)
             elif str(Producto.get_nomProducto(i)) != nom:
                 RepositorioCombo.ObtenerProdNom(nom)
-        
+        else:
+            print("Producto no diponible.")
             

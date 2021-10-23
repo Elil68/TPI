@@ -48,3 +48,5 @@ class Combo():
     def MostrarComboEspec(self):
         if self.__stockCombo > 0:
             print(self.__nomCombo, self.__precioCombo, self.__desc, self.__stockCombo)
+        else: 
+            print("Combo sin stock.")

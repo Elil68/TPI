@@ -1,4 +1,3 @@
-from Categoria import Categoria
 
 
 class Producto():
@@ -55,6 +54,8 @@ class Producto():
     def MostrarProdEspec(self):
         if self.__stockProducto > 0:
             print(self.__nomProducto, self.__precio, self.__desc, self.__color, self.__categoria, self.__stockProducto)
+        else:
+            print("Producto sin stock.")
 
     def __str__(self):
         return f"{self.__nomProducto}, {self.__precio}, {self.__desc}, {self.__color}, {self.__categoria}, {self.__stockProducto}"

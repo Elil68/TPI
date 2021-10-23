@@ -25,7 +25,7 @@ class RepositorioCombo():
         for i in listCombo:
             if str(Combo.get_nomCombo(i)) == nom:
                 Combo.MostrarComboEspec(i)
-        else:
-            print("Producto no encontrado.")
+        # else:
+        #     print("Producto no encontrado.")
         
         

@@ -1,6 +1,6 @@
 from Producto import Producto
 from RepositorioCombo import RepositorioCombo
-from Combo import Combo
+
 
 listProductos = []
 
@@ -12,6 +12,11 @@ class RepositorioProductos():
 
     def LongitudLista():
         return len(listProductos)
+
+    def BuscarProducto(produc):
+        for i in listProductos:
+            return i 
+
     def ObtenerProductos():
         
         for i in listProductos:
@@ -25,14 +30,18 @@ class RepositorioProductos():
                 Producto.MostrarProdEspec(i)
     
     def ObtenerProdFiltro(categoria):
+        j = 0
         if categoria == 'Combo':
                 RepositorioCombo.ObtenerProdFiltro()
+                j = j + 1
         elif categoria != 'Combo':    
             for i in listProductos:
                 if str(Producto.get_categoria(i)) == categoria:
+                    j = j+ 1
                     Producto.MostrarProdEspec(i)
         else:
             print("Categoria no existente.")
+        return j
 
     def ObternerProdNom(nom):
         for i in listProductos:
@@ -43,3 +52,17 @@ class RepositorioProductos():
         else:
             print("Producto no diponible.")
             
+    def ComprobarProducOferta(fecha):
+        for i in listProductos:
+            if fecha >= Producto.get_fechaInOferta(i) and fecha <= Producto.get_fechaFinOferta(i):
+                print(Producto.MostrarOfertas(i))
+            else:
+                return print('No hay ofertas este dia.')
+                
+    def ObtenerOferta(fecha):
+        for i in listProductos:
+            if fecha >= Producto.get_fechaInOferta(i) and fecha < Producto.get_fechaFinOferta(i):
+                return True
+            else:
+                return False
+        

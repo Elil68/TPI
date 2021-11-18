@@ -1,4 +1,5 @@
 from Combo import Combo
+
 listCombo = []
 
 class RepositorioCombo():
@@ -25,7 +26,7 @@ class RepositorioCombo():
         for i in listCombo:
             if str(Combo.get_nomCombo(i)) == nom:
                 Combo.MostrarComboEspec(i)
-        # else:
-        #     print("Producto no encontrado.")
-        
+
+    def LongitudLista():
+        return len(listCombo)
         

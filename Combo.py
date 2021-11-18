@@ -1,5 +1,3 @@
-from Categoria import Categoria
-
 
 class Combo():
     def __init__(self, codCombo, nomCombo, precioCombo, desc, stockCombo, categoria):
@@ -23,7 +21,7 @@ class Combo():
     
     def get_precioCombo(self):
         return self.__precioCombo
-    def set_precioComob(self, precioCombo):
+    def set_precioCombo(self, precioCombo):
         self.__precioCombo = precioCombo
 
     def get_desc(self):
@@ -47,6 +45,8 @@ class Combo():
     
     def MostrarComboEspec(self):
         if self.__stockCombo > 0:
+            print('\n')
             print(self.__nomCombo, self.__precioCombo, self.__desc, self.__stockCombo)
+
         else: 
             print("Combo sin stock.")
